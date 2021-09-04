@@ -12,7 +12,7 @@
 
   <style>
     body {
-      background-color: yellow; 
+      background-color: purple; 
       margin: 0;
       padding: 0;}
     h1   {color: blue;}
@@ -22,7 +22,7 @@
         height: 1000px;
         padding: 0;
         overflow: hidden;
-}
+    }
     #frame {  
         -ms-zoom: 0.5;
         -ms-transform-origin: 0 0;
@@ -32,18 +32,22 @@
         -o-transform-origin: 0px 75px;
         -webkit-transform: scale(0.75);
         -webkit-transform-origin: 0 0;
-}
+    }
     #frame {
         width: 115%;
         height: 1000px;
         overflow: hidden;
-}
+    }
+    #header {
+      padding-right: 0; 
+      padding-left: 0;
+    }
 </style>
 
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="container-fluid header">
   <!-- <h2>Carousel Example</h2> -->
   <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" height=8245vh>
     <!-- Indicators -->
