@@ -24,6 +24,9 @@
     .carousel-control-next-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23939597' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
     }
+    /* Change color of carousel indicators
+    .carousel .carousel-indicators li {  background-color: #939597; }
+    .carousel .carousel-indicators li.active { background-color: #363945; }
     </style>
 </head>
 
@@ -31,12 +34,13 @@
     <div class="container-fluid p-0">
         <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" height=8245vh>
     
-        <!-- Indicators 
+        <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol> -->
+        </ol> 
+        <!-- -->
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
@@ -54,14 +58,14 @@
             </div>
         
         </div>
-
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+            <!-- Left and right controls
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+            -->
         </div>
 </div>
 
