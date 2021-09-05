@@ -12,14 +12,14 @@
 
   <style>
     body {
-      background-color: green; 
+      background-color: blue; 
       margin: 0;
       padding: 0;}
     h1   {color: blue;}
     p    {color: red;}
     #wrap {  
         width: 115%;
-        height: 1000px;
+        height: 1200px;
         overflow: hidden;
     }
     #frame {  
@@ -34,7 +34,7 @@
     }
     #frame {
         width: 115%;
-        height: 1000px;
+        height: 1200px;
         overflow: hidden;
     }
 </style>
@@ -44,42 +44,30 @@
 
 <div class="container-fluid p-0">
 <div class="row no-gutters">
-  <!-- <h2>Carousel Example</h2> -->
-  <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" height=8245vh>
+  <!-- <h2>Newsroom</h2> -->
+  <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" height=100vh> <!-- 8245vh -->
+    <!--
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
+    -->
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
 
       <div id="wrap" class="item active">
-          <iframe id="frame" src="https://m.faz.net/aktuell/wirtschaft/" width="100%" height="1000"></iframe>
-          <div class="carousel-caption">
-            <h3>Los Angeles</h3>
-            <p>LA is always so much fun!</p>
-          </div>
+          <iframe id="frame" src="https://m.faz.net/aktuell/wirtschaft/" width="100%" height="1200"></iframe>
       </div>
 
       <div class="item">
-        <!-- <img src="chicago.jpg" alt="Chicago" style="width:100%;"> -->
-          <iframe src="https://app.handelsblatt.com/unternehmen/" width="100%" height="1000"></iframe>
-          <!-- <div class="carousel-caption">
-            <h3>Chicago</h3>
-            <p>Thank you, Chicago!</p>
-          </div> -->
+          <iframe src="https://app.handelsblatt.com/unternehmen/" width="100%" height="1200"></iframe>
       </div>
     
       <div class="item">
-          <!-- <img src="ny.jpg" alt="New York" style="width:100%;"> -->
-          <iframe src="https://www.nzz.ch/deutschland" width="100%" height="1000"></iframe>
-          <div class="carousel-caption">
-            <h3>New York</h3>
-            <p>We love the Big Apple!</p>
-          </div>  
+        <iframe src="https://www.nzz.ch/deutschland" width="100%" height="1200"></iframe>
       </div>
   
     </div>
