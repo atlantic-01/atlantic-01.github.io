@@ -10,10 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
+
     <style>
     body {
-        background-color: #363945;
-        /*background-color: blue;*/
+        background-color: #363945; 
         margin: 0;
         padding: 0;
     }
@@ -25,15 +27,22 @@
     .carousel-control-next-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23939597' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
     }
-     
-    /* Change color of carousel indicators */
-    .carousel .carousel-indicators li {  background-color: #939597 !important; }
-    .carousel .carousel-indicators li.active { background-color: #363945 !important; }
+    .carousel .carousel-indicators li {  background-color: #939597; }
+    .carousel .carousel-indicators li.active { background-color: #363945; }
+    
+    p.coversheet {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 72px;
+        color: #ffffff;
+    }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
+        
         <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" data-touch="false" height=8245vh>
     
         <!-- Indicators
@@ -41,35 +50,61 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol> 
-        -->
+        </ol> -->
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
 
-            <div class="carousel-item active">
-            <iframe src="https://www.nzz.ch/deutschland" width="100%" height="1000"></iframe>
+            <!-- POLITIK --->
+            <div class="carousel-item active" style="background-color: #0072B5" width="100%" height="100%">
+                <div class="container-fluid min-vh-100 d-flex flex-column">
+                    <div class="row d-flex flex-column flex-grow-1">
+                        <div class="col h-100 d-flex flex-column" style="margin-top: 50px; margin-left: 50px;">
+                            <p class="coversheet">Politik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="carousel-item">
+                <iframe id="iframe1" src="https://www.nzz.ch/deutschland" width="100%" height="1000"> </iframe>
             </div>
 
             <div class="carousel-item">
-            <iframe src="https://m.faz.net/aktuell/wirtschaft/" width="100%" height="1000"></iframe>
+                <iframe src="https://m.faz.net/aktuell/politik/" width="100%" height="1000"></iframe>
+            </div>
+
+            <!-- WIRTSCHAFT --->
+            <div class="carousel-item" style="background-color: #00A170" width="100%" height="100%">
+                <div class="container-fluid min-vh-100 d-flex flex-column">
+                    <div class="row d-flex flex-column flex-grow-1">
+                        <div class="col h-100 d-flex flex-column" style="margin-top: 50px; margin-left: 50px;">
+                            <p class="coversheet">Wirtschaft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <iframe src="https://m.faz.net/aktuell/wirtschaft/" width="100%" height="1000"></iframe>
             </div>
         
             <div class="carousel-item">
-            <iframe src="https://app.handelsblatt.com/unternehmen/" width="100%" height="1000"></iframe>
+                <iframe src="https://app.handelsblatt.com/unternehmen/" width="100%" height="1000"></iframe>
             </div>
         
-            </div>
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
         </div>
-    </div>
+
+        <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+</div>
+
 </body>
 
 </html>
