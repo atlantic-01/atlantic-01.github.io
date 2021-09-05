@@ -20,13 +20,28 @@
         padding: 0;
     }
     /* Change color of carousel arrow icons by changing the last six digits of fill='%23xxxxxx' to the hex code of the desired color */
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        /* top: 50%; */
+        top: 90px;
+        bottom: 0px;
+        width: 3%;
+        height: 3%;
+        opacity: 1;
+        z-index: 0;
+    }
+    
     .carousel-control-prev-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23939597' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-        }
+        z-index: 1;
+    }
 
     .carousel-control-next-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23939597' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        z-index: 1;
     }
+    
     .carousel .carousel-indicators li {  background-color: #939597; }
     .carousel .carousel-indicators li.active { background-color: #363945; }
     
@@ -43,71 +58,71 @@
 <body>
     <div class="container-fluid p-0">
         
-        <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" data-touch="true" height=8245vh>
-    
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-        </ol>
+        <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" data-touch="true">
+        <!-- <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel" data-touch="true" height=8245vh> -->        
+            <!-- Indicators
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+            -->
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
 
-            <!-- POLITIK --->
-            <div class="carousel-item active" style="background-color: #0072B5">
-                <div class="container-fluid min-vh-100 d-flex flex-column">
-                    <div class="row d-flex flex-column flex-grow-1">
-                        <div class="col h-100 d-flex flex-column" style="margin-top: 50px; margin-left: 50px;">
-                            <p class="coversheet">Politik</p>
+                <!-- POLITIK --->
+                <div class="carousel-item active" style="background-color: #0072B5">
+                    <div class="container-fluid min-vh-100 -flex flex-column">
+                        <div class="row d-flex flex-column flex-grow-1">
+                            <div class="col h-100 d-flex flex-column" style="margin-top: 50px; margin-left: 50px;">
+                                <p class="coversheet">Politik</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                    
+                <div class="carousel-item">
+                    <iframe id="iframe1" src="https://www.nzz.ch/deutschland" width="100%" height="1000"> </iframe>
+                </div>
+
+                <div class="carousel-item">
+                    <iframe src="https://m.faz.net/aktuell/politik/" width="100%" height="1000"></iframe>
+                </div>
+
+                <!-- WIRTSCHAFT --->
+                <div class="carousel-item" style="background-color: #00A170">
+                    <div class="container-fluid min-vh-100 d-flex flex-column">
+                        <div class="row d-flex flex-column flex-grow-1">
+                            <div class="col h-150 d-flex flex-column" style="margin-top: 50px; margin-left: 50px;">
+                                <p class="coversheet">Wirtschaft</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-            <div class="carousel-item">
-                <iframe id="iframe1" src="https://www.nzz.ch/deutschland/politik" width="100%" height="1000"> </iframe>
-            </div>
-
-            <div class="carousel-item">
-                <iframe src="https://m.faz.net/aktuell/politik/" width="100%" height="1000"></iframe>
-            </div>
-
-            <!-- WIRTSCHAFT --->
-            <div class="carousel-item" style="background-color: #00A170" width="100%" height="150%">
-                <div class="container-fluid min-vh-100 d-flex flex-column">
-                    <div class="row d-flex flex-column flex-grow-1">
-                        <div class="col h-100 d-flex flex-column" style="margin-top: 50px; margin-left: 50px;">
-                            <p class="coversheet">Wirtschaft</p>
-                        </div>
-                    </div>
+                <div class="carousel-item">
+                    <iframe src="https://m.faz.net/aktuell/wirtschaft/" width="100%" height="1000"></iframe>
                 </div>
-            </div>
             
-            <div class="carousel-item">
-                <iframe src="https://m.faz.net/aktuell/wirtschaft/" width="100%" height="1000"></iframe>
+                <div class="carousel-item">
+                    <iframe src="https://app.handelsblatt.com/unternehmen/" width="100%" height="1000"></iframe>
+                </div>
+            
             </div>
-        
-            <div class="carousel-item">
-                <iframe src="https://app.handelsblatt.com/unternehmen/" width="100%" height="1000"></iframe>
+            <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
-        
-        </div>
-
-        <!-- Left and right controls
-            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-        -->
-</div>
+        </div>>
+    </div>
 
 </body>
 
