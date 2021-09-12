@@ -1,0 +1,217 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,700";
+
+/* -----------------------
+   GENERAL
+----------------------- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #FFFFFF; /*#FEFBF2;*/
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #363945;
+}
+
+a, a:hover, a:focus {
+     color: inherit;
+     text-decoration: none;
+     transition: all 0.3s;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #EBDDCA;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #FAFAFA;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.navbar-bg-custom {
+    background-color: #FEFBF2;
+}
+
+/* -----------------------
+   SIDE BAR
+----------------------- */
+.wrapper {                  /* "." class selector styling a specific class */
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    perspective: 1500px;
+}
+
+#sidebar {                  /* "#" id selector styling a single element with this specific id */
+    min-width: 250px; /*250px*/
+    max-width: 250px; /*250px*/
+    background: #EFE1CE;
+    color: #FAFAFA;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: bottom left;
+}
+
+#sidebar.active {
+    margin-left: -250px; /*-250px*/
+    transform: rotateY(100deg);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #EBDDCA;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #E5D8C5;
+}
+
+#sidebar ul p {
+    color: #FAFAFA;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #EFE1CE;
+    background: #FAFAFA;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #FAFAFA;
+    background: #EBDDCA;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* -----------------------
+   CONTENT
+----------------------- */
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #DDDDDD;
+    margin: 40px 0;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* -----------------------
+   SIDEBAR COLLAPSE BUTTON
+----------------------- */
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #F5F5F5;
+    cursor: pointer;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+    opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebarCollapse.active span {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+    This is required for a slightly different behavior
+    of the sidebar on smaller screens.
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(90deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+}
